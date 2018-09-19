@@ -18,5 +18,12 @@ function exactMatch(drivers, match) {
       matches = driver[key] === match[key];
     }
     return matches;
-  })
+  });
+}
+
+function exactMatchToList(drivers, match) {
+  return exactMatch(drivers, match)
+    .map(function (driver) {
+      return driver.name;
+    });
 }
